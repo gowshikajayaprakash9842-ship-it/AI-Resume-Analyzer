@@ -2,9 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # --- 1. CONFIGURATION ---
-# Put your secret Gemini API key inside the quotes below!
-API_KEY = "AQ.Ab8RN6JO-qzQpZO67v92n7v95Sb_uk_5KLXMZoo-aHSH-YHqag"
-genai.configure(api_key=API_KEY)
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # --- 2. THE WEBPAGE LAYOUT ---
 st.set_page_config(page_title="AI Resume Upgrader", page_icon="🚀", layout="centered")
